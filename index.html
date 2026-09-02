@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multan Commercial Complex (MCC) | Premier Commercial Landmark</title>
+  <meta name="description" content="Multan Commercial Complex (MCC) - MDA-approved triple-story commercial units on Bosan Road, Multan. Led by MD Mahar Mazhar Nawaz Sayal." />
+  <link rel="icon" type="image/jpeg" href="images/mcc_logo_gold.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    :root { overflow-x: hidden; }
+    html, body { max-width: 100vw; overflow-x: hidden; }
+
+    .gold-text { background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 40%, #F5C842 70%, #AA820A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gold-btn { background: linear-gradient(135deg, #F5C842, #D4AF37, #AA820A); color: #0a0a0a; font-weight: 800; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(212,175,55,0.4); }
+    .gold-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(212,175,55,0.5); }
+    .glass-nav { background: rgba(8,13,26,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212,175,55,0.2); }
+    .hero-overlay { background: linear-gradient(135deg, rgba(8,13,26,0.92) 0%, rgba(8,13,26,0.80) 50%, rgba(8,13,26,0.60) 100%); }
+    .md-glow { box-shadow: 0 0 40px rgba(212,175,55,0.35), 0 0 80px rgba(212,175,55,0.15), inset 0 0 30px rgba(0,0,0,0.5); }
+    .stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,175,55,0.15); }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    .section-divider { background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent); height: 1px; }
+    .md-portrait-frame { position: relative; }
+    .md-portrait-frame::before { content: ''; position: absolute; inset: -3px; background: linear-gradient(135deg, #D4AF37, #080D1A, #D4AF37); border-radius: 24px; z-index: -1; }
+  </style>
+</head>
+<body class="bg-[#080D1A] text-slate-100 antialiased" style="overflow-x:hidden">
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] hidden bg-slate-900 border-2 border-amber-400 text-amber-100 px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+    <i data-lucide="check-circle-2" class="text-amber-400 w-5 h-5 flex-shrink-0"></i>
+    <span id="toast-msg" class="text-sm font-semibold">Inquiry sent!</span>
+    <button onclick="hideToast()" class="ml-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 text-slate-950 py-2 text-xs font-bold">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="bg-black/30 text-amber-100 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider whitespace-nowrap flex-shrink-0">MDA Approved</span>
+        <span class="hidden sm:inline truncate">MCC • Chungi No. 6, Bosan Road | <i data-lucide="mail" class="w-3 h-3 inline"></i> mccmultancommercialcomplex@gmail.com</span>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="https://vt.tiktok.com/ZSVWUpw3p/" target="_blank" title="TikTok" class="hover:text-black"><i data-lucide="video" class="w-4 h-4 inline-block"></i></a>
+        <a href="https://www.tiktok.com/@multancommercialcomplex" target="_blank" title="Channel" class="hover:text-black"><i data-lucide="share-2" class="w-4 h-4 inline-block"></i></a>
+        <a href="https://www.instagram.com/multancommercialcomplexmcc" target="_blank" title="Instagram" class="hover:text-black"><i data-lucide="instagram" class="w-4 h-4 inline-block"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================
+       NAVBAR — Fully Contained, No Overflow
+  ================================ -->
+  <header id="main-header" class="glass-nav sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 lg:px-6 h-[70px] flex items-center justify-between gap-3 w-full box-border">
+      
+      <!-- Logo + Brand -->
+      <a href="#" class="flex items-center gap-2.5 flex-shrink-0 min-w-0 group">
+        <img src="images/mcc_logo_gold.jpg" alt="MCC Logo" class="w-10 h-10 rounded-xl border border-amber-400/40 object-contain bg-slate-900 flex-shrink-0 p-0.5" />
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5 whitespace-nowrap">
+            <span class="font-display font-black text-base lg:text-lg xl:text-xl tracking-tight gold-text whitespace-nowrap">MCC MULTAN</span>
+            <span class="text-[9px] font-extrabold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded whitespace-nowrap">Seyalz</span>
+          </div>
+          <p class="text-[10px] text-slate-400 whitespace-nowrap leading-tight">Multan Commercial Complex</p>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden xl:flex items-center gap-5 text-[13px] font-semibold whitespace-nowrap flex-shrink-0">
+        <a href="#hero" class="hover:text-amber-400 transition-colors">Home</a>
+        <a href="#md-message" class="hover:text-amber-400 transition-colors">MD's Vision</a>
+        <a href="#projects" class="text-amber-300 hover:text-amber-400 transition-colors">Our Projects</a>
+        <a href="#offerings" class="hover:text-amber-400 transition-colors">Commercial Units</a>
+        <a href="#location" class="hover:text-amber-400 transition-colors">Location</a>
+        <a href="#amenities" class="hover:text-amber-400 transition-colors">Amenities</a>
+        <a href="#roi-calculator" class="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i> ROI Calculator
+        </a>
+        <a href="#connect" class="hover:text-amber-400 transition-colors">Connect</a>
+      </nav>
+
+      <!-- Action Buttons — Contained -->
+      <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+        <button onclick="toggleTheme()" class="p-2 rounded-xl border border-slate-700 bg-slate-800 text-amber-400 hover:bg-slate-700 flex-shrink-0">
+          <i data-lucide="sun" class="w-4 h-4"></i>
+        </button>
+        <a href="tel:+923006367424" class="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border border-slate-700 bg-slate-900/70 hover:border-amber-400 hover:text-amber-300 transition-all whitespace-nowrap flex-shrink-0">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-400 flex-shrink-0"></i>
+          <span>+92 300 6367424</span>
+        </a>
+        <button onclick="openModal('visit-modal')" class="px-4 py-2 rounded-xl text-xs font-bold gold-btn whitespace-nowrap flex-shrink-0">
+          Book Site Visit
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <div class="flex xl:hidden md:hidden items-center gap-2 flex-shrink-0">
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-xl border border-slate-700 bg-slate-800 text-amber-400">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="hidden md:flex xl:hidden items-center gap-1 flex-shrink-0">
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-xl border border-slate-700 bg-slate-800 text-amber-400">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden px-5 py-5 border-t border-slate-800 bg-slate-900/98">
+      <div class="flex flex-col gap-4 text-sm font-semibold">
+        <a onclick="toggleMobileMenu()" href="#hero" class="hover:text-amber-400 py-1">Home Dashboard</a>
+        <a onclick="toggleMobileMenu()" href="#md-message" class="hover:text-amber-400 py-1">MD's Vision & Leadership</a>
+        <a onclick="toggleMobileMenu()" href="#projects" class="hover:text-amber-400 py-1 text-amber-300 font-bold">Our Portfolio Projects</a>
+        <a onclick="toggleMobileMenu()" href="#offerings" class="hover:text-amber-400 py-1">Commercial Units</a>
+        <a onclick="toggleMobileMenu()" href="#location" class="hover:text-amber-400 py-1">Strategic Location</a>
+        <a onclick="toggleMobileMenu()" href="#amenities" class="hover:text-amber-400 py-1">Key Amenities</a>
+        <a onclick="toggleMobileMenu()" href="#roi-calculator" class="hover:text-amber-400 py-1 text-amber-400 flex items-center gap-2">
+          <i data-lucide="calculator" class="w-4 h-4"></i> ROI Calculator
+        </a>
+        <a onclick="toggleMobileMenu()" href="#connect" class="hover:text-amber-400 py-1">Connect with MCC</a>
+        <div class="pt-3 border-t border-slate-800 flex flex-col gap-3">
+          <button onclick="toggleMobileMenu(); openModal('visit-modal');" class="w-full py-3 rounded-xl font-bold gold-btn text-center">Book a Site Visit</button>
+          <a href="https://wa.me/923006367424" target="_blank" class="w-full py-3 rounded-xl font-bold bg-emerald-600 text-white flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+﻿  <!-- ================================
+       MAIN HERO SECTION
+  ================================ -->
+  <section id="hero" class="relative min-h-[100vh] flex flex-col justify-center overflow-hidden">
+    
+    <!-- Background Image & Luxury Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/mcc_main_facade.jpg" alt="MCC Facade" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#080D1A]/95 via-[#080D1A]/70 to-[#080D1A]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Main Content (Centered, Ultra-Premium) -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full flex flex-col items-center text-center mt-12 pb-24">
+      
+      <!-- REDESIGNED TOP ROW BADGES -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+        <div class="group relative px-6 py-2.5 rounded-full border border-amber-400/40 bg-slate-950/60 backdrop-blur-md shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:border-amber-400/80 transition-all duration-500 cursor-default">
+          <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
+          <span class="relative flex items-center gap-2.5 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-amber-400">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> MDA Approved Project
+          </span>
+        </div>
+        
+        <div class="group relative px-6 py-2.5 rounded-full border border-blue-500/40 bg-slate-950/60 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-blue-400/80 transition-all duration-500 cursor-default">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
+          <span class="relative flex items-center gap-2.5 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-blue-300">
+            <i data-lucide="map-pin" class="w-4 h-4"></i> Chungi No. 6, Bosan Road, Multan
+          </span>
+        </div>
+      </div>
+
+      <!-- SEYALZ BRANDING -->
+      <div class="flex flex-col items-center gap-4 mb-6">
+        <div class="relative p-1 rounded-2xl bg-gradient-to-b from-amber-400/50 to-transparent">
+          <img src="images/mcc_logo_gold.jpg" alt="MCC Logo" class="w-14 h-14 rounded-xl object-contain bg-slate-950 p-1 shadow-2xl" />
+        </div>
+        <span class="text-[11px] font-black uppercase tracking-[0.35em] text-amber-300 drop-shadow-md">Seyalz Builders & Developers</span>
+      </div>
+
+      <!-- MONUMENTAL TYPOGRAPHY -->
+      <h1 class="font-display font-black leading-[1.05] tracking-tighter mb-8">
+        <span class="block text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.5rem] uppercase drop-shadow-2xl">Multan</span>
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-600 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[7.5rem] uppercase drop-shadow-2xl pb-2">Commercial</span>
+        <span class="block text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] uppercase tracking-widest drop-shadow-2xl">Complex</span>
+      </h1>
+
+      <div class="h-[1px] w-48 bg-gradient-to-r from-transparent via-amber-400/80 to-transparent my-6"></div>
+
+      <!-- PREMIUM SUBTITLE -->
+      <p class="text-sm sm:text-base lg:text-xl font-light text-slate-300 leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow-md">
+        The Epitome of <strong class="text-amber-400 font-bold tracking-wide">Modern Commercial Excellence</strong>. Triple-Story Units, Premium Retail Shops & Corporate Halls at South Punjab's most prestigious commercial address.
+      </p>
+
+      <!-- REDESIGNED CTA BUTTONS -->
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#projects" class="group relative px-10 py-5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:shadow-[0_0_40px_rgba(212,175,55,0.7)] transition-all duration-300 hover:-translate-y-1">
+          <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
+          <span class="relative flex items-center justify-center gap-3 font-display font-black text-[13px] uppercase tracking-[0.15em] text-slate-950">
+            <i data-lucide="building-2" class="w-5 h-5"></i> Explore Our Projects
+          </span>
+        </a>
+        
+        <button onclick="openModal('visit-modal')" class="group relative px-10 py-5 rounded-full border border-amber-400/40 bg-slate-900/60 backdrop-blur-md overflow-hidden hover:bg-amber-400/15 hover:border-amber-400 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:-translate-y-1">
+          <span class="relative flex items-center justify-center gap-3 font-display font-bold text-[13px] uppercase tracking-[0.15em] text-white group-hover:text-amber-400 transition-colors">
+            <i data-lucide="calendar-check" class="w-5 h-5 text-amber-400"></i> Schedule Site Visit
+          </span>
+        </button>
+      </div>
+
+    </div>
+    
+    <!-- LUXURY SCROLL INDICATOR -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer" onclick="document.getElementById('leadership').scrollIntoView({behavior:'smooth'})">
+      <span class="text-[9px] font-black uppercase tracking-[0.3em] text-amber-400">Scroll to Explore</span>
+      <div class="w-6 h-10 rounded-full border border-amber-400/50 flex justify-center p-1.5 bg-slate-950/50 backdrop-blur-sm">
+        <div class="w-1 h-2 bg-amber-400 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- ================================
+       LEADERSHIP (CEO & MD) SECTION
+  ================================ -->
+﻿
+  <!-- ================================
+       OUR PROJECTS SECTION
+  ================================ -->
+  <section id="projects" class="py-24 bg-slate-950 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-black uppercase tracking-wider mb-3">
+          <i data-lucide="building" class="w-4 h-4"></i> Portfolio & Landmark Developments
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tight text-white mb-4">
+          Our Portfolio: Building Commercial Excellence in Multan
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Iconic commercial landmarks by <strong class="text-slate-200">Seyalz Builders & Developers</strong>, setting new standards in architectural prestige and commercial profitability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PROJECT 1: MCC -->
+        <div class="group rounded-3xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl flex flex-col hover:border-amber-400 transition-all duration-500 hover:-translate-y-2">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/mcc_main_facade.jpg" alt="Multan Commercial Complex" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-black/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2 flex-wrap">
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950">Flagship</span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-emerald-500 text-white">MDA Approved</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <div class="text-xs text-amber-300 font-bold uppercase tracking-wider">Triple Story Complex</div>
+              <h3 class="font-display font-extrabold text-xl mt-0.5">Multan Commercial Complex (MCC)</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+              <span>Chungi No. 6, Bosan Road, Near Chaseup Mall, Multan</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">Grand neoclassical commercial complex featuring double-height retail shopfronts, open-span corporate halls, and massive basement parking.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Triple Story Units</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">100% Power Backup</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">200+ Parking</span>
+            </div>
+            <div class="mt-auto">
+              <button onclick="openProjectModal('mcc')" class="w-full py-3 rounded-xl font-bold text-xs gold-btn flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i> View Details & Full Amenities
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Seyal Commercial Centre -->
+        <div class="group rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl flex flex-col hover:border-amber-400 transition-all duration-500 hover:-translate-y-2">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/project_seyal_commercial_centre_1.jpg" alt="Seyal Commercial Centre" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-black/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2 flex-wrap">
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-blue-600 text-white">Delivered</span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950">For Rent & Sale</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <div class="text-xs text-amber-300 font-bold uppercase tracking-wider">Premier Retail Boulevard</div>
+              <h3 class="font-display font-extrabold text-xl mt-0.5">Seyal Commercial Centre</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+              <span>Near ISP University, Opp. DHA Main Bosan Road, Multan</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">Home to Crystal, Bonanza, Dhanak brands. Double-story commercial halls with prime Bosan Road frontage and registry setup.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Double Story Hall</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Ample Parking</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Registry Setup</span>
+            </div>
+            <div class="mt-auto">
+              <button onclick="openProjectModal('scc')" class="w-full py-3 rounded-xl font-bold text-xs bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-200 border border-slate-700 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i> View Details & Full Amenities
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Seyalz Tower -->
+        <div class="group rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl flex flex-col hover:border-amber-400 transition-all duration-500 hover:-translate-y-2">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/project_seyalz_tower.jpg" alt="Seyalz Commercial Tower" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-black/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2 flex-wrap">
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-purple-600 text-white">Commercial Tower</span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950">Corporate Hub</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <div class="text-xs text-amber-300 font-bold uppercase tracking-wider">Multi-Story Architecture</div>
+              <h3 class="font-display font-extrabold text-xl mt-0.5">Seyalz Commercial Tower</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+              <span>Chungi #6, Near Chaseup Main Bosan Road, Multan</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">Contemporary high-rise commercial building with glass architecture, executive corporate suites, and capsule elevators.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Executive Suites</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Capsule Elevators</span>
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">Dedicated Lobby</span>
+            </div>
+            <div class="mt-auto">
+              <button onclick="openProjectModal('tower')" class="w-full py-3 rounded-xl font-bold text-xs bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-200 border border-slate-700 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i> View Details & Full Amenities
+              </button>
+            </div>
+          </div>
+        </div>
+
+              <a href="mailto:mccmultancommercialcomplex@gmail.com" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-red-500 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5 lg:col-span-2 xl:col-span-1">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-red-600 flex items-center justify-center border border-red-500 group-hover:border-red-400 transition-colors">
+              <i data-lucide="mail" class="w-7 h-7 text-white"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-red-600 group-hover:text-white transition-colors">Email</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-red-300 transition-colors">Official Email</h4>
+          <p class="text-[11px] text-slate-400 mb-4 break-all">mccmultancommercialcomplex@gmail.com</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-red-400"><span>Send Email</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       CONNECT WITH MCC — SOCIAL HUB
+  ================================ -->
+  <section id="connect" class="py-20 bg-gradient-to-b from-[#080D1A] to-slate-950 border-y border-amber-400/20">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-black uppercase tracking-wider mb-3">
+          <i data-lucide="share-2" class="w-4 h-4"></i> Official Channels & Social Hub
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight mb-2">Connect with MCC</h2>
+        <p class="text-sm text-slate-400">Stay updated with construction progress, possession updates, and new launches.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="https://vt.tiktok.com/ZSVWUpw3p/" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center border border-slate-700 group-hover:border-amber-400 transition-colors">
+              <i data-lucide="video" class="w-7 h-7 text-amber-400"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">TikTok</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-amber-300 transition-colors">MCC Official TikTok</h4>
+          <p class="text-xs text-slate-400 mb-4">Property walkthroughs, drone footage & client reviews.</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-amber-400"><span>Follow @MCC</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+
+        <a href="https://www.tiktok.com/@multancommercialcomplex?_r=1&_t=ZS-99IfGOF88Rx" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center border border-blue-500 group-hover:border-blue-400 transition-colors">
+              <i data-lucide="share-2" class="w-7 h-7 text-white"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-blue-600 group-hover:text-white transition-colors">Channel</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-blue-300 transition-colors">MCC Social Channel</h4>
+          <p class="text-xs text-slate-400 mb-4">Community updates, project announcements & investor briefings.</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-blue-400"><span>Join Community</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/multancommercialcomplexmcc?igsi=dXB2dmJvNjNjeTJt" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-pink-500 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 flex items-center justify-center">
+              <i data-lucide="instagram" class="w-7 h-7 text-white"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-pink-600 group-hover:text-white transition-colors">Instagram</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-pink-300 transition-colors">MCC Instagram</h4>
+          <p class="text-xs text-slate-400 mb-4">High-resolution photography, stories & architectural renders.</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-pink-400"><span>Follow @multancommercialcomplexmcc</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+
+        <a href="https://wa.me/923006367424?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20MCC%20projects." target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-600 flex items-center justify-center border border-emerald-500">
+              <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-emerald-600 group-hover:text-white transition-colors">24/7 Live</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-emerald-300 transition-colors">WhatsApp Sales Desk</h4>
+          <p class="text-xs text-slate-400 mb-4">Instant chat with sales advisors, rate breakdown & booking.</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-400"><span>Chat +92 300 6367424</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+              <a href="mailto:mccmultancommercialcomplex@gmail.com" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl border border-slate-800 bg-slate-900 hover:border-red-500 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5 lg:col-span-2 xl:col-span-1">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-red-600 flex items-center justify-center border border-red-500 group-hover:border-red-400 transition-colors">
+              <i data-lucide="mail" class="w-7 h-7 text-white"></i>
+            </div>
+            <span class="text-xs font-black uppercase px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 group-hover:bg-red-600 group-hover:text-white transition-colors">Email</span>
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-1 group-hover:text-red-300 transition-colors">Official Email</h4>
+          <p class="text-[11px] text-slate-400 mb-4 break-all">mccmultancommercialcomplex@gmail.com</p>
+          <div class="flex items-center gap-1.5 text-xs font-bold text-red-400"><span>Send Email</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+﻿
+  <!-- ================================
+       COMMERCIAL UNITS & ROI CALCULATOR
+  ================================ -->
+  <section id="offerings" class="py-24 bg-[#080D1A]">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-black uppercase tracking-wider mb-3">
+          <i data-lucide="layers" class="w-4 h-4"></i> Space & Configurations
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">Commercial Units & Corporate Layouts</h2>
+        <p class="text-slate-400 text-base sm:text-lg">Versatile commercial halls, double-height retail shops, and corporate suites designed for maximum footfall and sustained ROI.</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Commercial Halls -->
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-5 relative min-h-[300px]">
+              <img src="images/mcc_commercial_interior.jpg" alt="Commercial Halls" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-6 left-6"><span class="px-3 py-1.5 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950">Corporate & Enterprise</span></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <div class="text-xs text-amber-300 font-bold uppercase">Specifications</div>
+                <div class="text-sm font-medium mt-1">Area: <strong>1,200 – 10,000 Sq. Ft.</strong></div>
+                <div class="text-sm font-medium">Floors: <strong>1st & 2nd</strong></div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-black uppercase tracking-widest text-amber-400">Commercial Halls</span>
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-bold">Yield: 10–12% Annually</span>
+                </div>
+                <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-3">State-of-the-Art Commercial Halls</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-5">Expansive, flexible layouts crafted for corporate headquarters, hypermarkets, multinational brand flagships, and financial institutions.</p>
+                <div class="space-y-2 mb-6">
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>Column-free floor plans with ultra-high ceilings</span></div>
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>Dedicated executive elevators & private service lobbies</span></div>
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>HVAC integration & heavy commercial electrical load capacity</span></div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <button onclick="openInquiryModal('Commercial Hall (1,200 - 10,000 Sq. Ft.)')" class="px-6 py-3 rounded-xl text-xs font-bold gold-btn flex items-center gap-2">
+                  <i data-lucide="message-square" class="w-4 h-4"></i> Inquire About Halls
+                </button>
+                <a href="https://wa.me/923006367424?text=Hi,%20please%20share%20Commercial%20Halls%20floor%20plan." target="_blank" class="px-5 py-3 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all flex items-center gap-2">
+                  <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> WhatsApp Floor Plan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retail Shops -->
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-5 relative min-h-[300px]">
+              <img src="images/mcc_retail_atrium.jpg" alt="Retail Shops" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-6 left-6"><span class="px-3 py-1.5 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950">High Street Retail</span></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <div class="text-xs text-amber-300 font-bold uppercase">Specifications</div>
+                <div class="text-sm font-medium mt-1">Area: <strong>250 – 1,500 Sq. Ft.</strong></div>
+                <div class="text-sm font-medium">Floors: <strong>Ground & Upper Ground</strong></div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-black uppercase tracking-widest text-amber-400">Retail Shops</span>
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-bold">Yield: 11–14% Annually</span>
+                </div>
+                <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-3">Prime Frontage Retail Shops</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-5">Strategically positioned ground-level shops designed for maximum footfall, brand visibility, and accelerated revenue growth.</p>
+                <div class="space-y-2 mb-6">
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>Maximum visibility on Chungi No. 6 main pedestrian corridor</span></div>
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>Wide frameless glass display facades for high-impact merchandising</span></div>
+                  <div class="flex items-start gap-2 text-sm text-slate-300"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i><span>Adjacent to Chaseup Mall — Multan's premier fashion retail hub</span></div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <button onclick="openInquiryModal('Retail Shop (250 - 1,500 Sq. Ft.)')" class="px-6 py-3 rounded-xl text-xs font-bold gold-btn flex items-center gap-2">
+                  <i data-lucide="message-square" class="w-4 h-4"></i> Inquire About Shops
+                </button>
+                <a href="https://wa.me/923006367424?text=Hi,%20please%20share%20Retail%20Shops%20pricing." target="_blank" class="px-5 py-3 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all flex items-center gap-2">
+                  <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> WhatsApp Rate List
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION SECTION -->
+  <section id="location" class="py-24 bg-slate-950 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-black uppercase tracking-wider mb-3">
+          <i data-lucide="map-pin" class="w-4 h-4"></i> Unrivaled Address
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">Strategic Commercial Corridor</h2>
+        <p class="text-slate-400 text-lg">Located at <strong class="text-slate-200">Chungi No. 6, Bosan Road, near Chaseup Mall</strong> — at the nexus of Multan's most affluent shopping and transit corridor.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="p-6 rounded-3xl border border-slate-800 bg-slate-900">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center"><i data-lucide="navigation" class="w-5 h-5"></i></div>
+              <div><h3 class="font-bold text-lg text-white">Nearby Landmarks</h3><p class="text-xs text-slate-400">Prime connectivity</p></div>
+            </div>
+            <div class="space-y-3">
+              <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center"><i data-lucide="shopping-bag" class="w-4 h-4"></i></div><div class="text-sm font-bold text-slate-200">Chaseup Mall</div></div><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">Adjacent</span></div>
+              <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center"><i data-lucide="coffee" class="w-4 h-4"></i></div><div class="text-sm font-bold text-slate-200">Gulgasht Avenue</div></div><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">3 Mins</span></div>
+              <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-4 h-4"></i></div><div class="text-sm font-bold text-slate-200">BZU Multan</div></div><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">7 Mins</span></div>
+              <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center"><i data-lucide="plane" class="w-4 h-4"></i></div><div class="text-sm font-bold text-slate-200">Multan International Airport</div></div><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">15 Mins</span></div>
+            </div>
+          </div>
+          <div class="p-6 rounded-3xl gold-btn shadow-xl">
+            <h4 class="text-xl font-display font-extrabold mb-1 text-slate-950">Chungi No. 6, Bosan Road</h4>
+            <p class="text-xs text-slate-900 mb-4 font-medium">Adjacent to Chaseup Mall & leading fashion retail flagships.</p>
+            <a href="https://maps.google.com/?q=Chungi+No+6+Bosan+Road+Multan" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-950 text-amber-300 font-bold text-xs hover:bg-black transition-colors">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="h-full min-h-[440px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl relative">
+            <iframe title="MCC Location Map" src="https://maps.google.com/maps?q=Chungi%20No.%206%20Bosan%20Road%20Multan%20Chaseup&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-full min-h-[440px] border-0" loading="lazy" allowfullscreen></iframe>
+            <div class="absolute top-4 left-4 z-10 p-3 rounded-2xl bg-slate-900/90 border border-amber-400/50 backdrop-blur-md shadow-xl text-white">
+              <div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div><span class="text-xs font-bold text-amber-300">Live Site</span></div>
+              <div class="text-sm font-extrabold mt-0.5">Bosan Road • Chungi No. 6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATOR -->
+  <section id="roi-calculator" class="py-24 border-y bg-[#080D1A] border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-black uppercase tracking-wider mb-4">
+            <i data-lucide="calculator" class="w-4 h-4"></i> Investor Analytics
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-6">Commercial Real Estate<br/><span class="gold-text">ROI Calculator</span></h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-light">Calculate your estimated monthly rental income and 5-year capital appreciation at Multan Commercial Complex.</p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-sm text-slate-300"><div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0"><i data-lucide="trending-up" class="w-4 h-4"></i></div><span>High occupancy fueled by Chaseup Mall adjacency</span></div>
+            <div class="flex items-center gap-3 text-sm text-slate-300"><div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0"><i data-lucide="shield-check" class="w-4 h-4"></i></div><span>Secure capital with clear MDA legal titles</span></div>
+            <div class="flex items-center gap-3 text-sm text-slate-300"><div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0"><i data-lucide="dollar-sign" class="w-4 h-4"></i></div><span>Annual rental escalation of 10% per annum</span></div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-3xl border border-slate-800 bg-slate-900/90 shadow-2xl">
+            <div class="space-y-6 mb-8">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Investment Capital (PKR)</label>
+                  <span id="roi-inv-val" class="text-sm font-extrabold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/20">PKR 2.50 Crore</span>
+                </div>
+                <input type="range" id="roi-inv-range" min="5000000" max="150000000" step="1000000" value="25000000" oninput="updateRoiCalc()" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" />
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Annual Rental Yield (%)</label>
+                  <span id="roi-yield-val" class="text-sm font-extrabold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/20">10.5% / Year</span>
+                </div>
+                <input type="range" id="roi-yield-range" min="7" max="16" step="0.5" value="10.5" oninput="updateRoiCalc()" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" />
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Capital Appreciation (%)</label>
+                  <span id="roi-appr-val" class="text-sm font-extrabold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-lg border border-blue-500/20">12% / Year</span>
+                </div>
+                <input type="range" id="roi-appr-range" min="8" max="25" step="1" value="12" oninput="updateRoiCalc()" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" />
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 p-5 rounded-2xl bg-slate-950/70 border border-slate-800 mb-6">
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800"><div class="text-xs text-slate-400">Monthly Rent</div><div id="roi-monthly-out" class="text-xl font-display font-extrabold text-amber-300 mt-1">PKR 2.19 Lakh</div></div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800"><div class="text-xs text-slate-400">Annual Rent</div><div id="roi-annual-out" class="text-xl font-display font-extrabold text-emerald-400 mt-1">PKR 26.25 Lakh</div></div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800"><div class="text-xs text-slate-400">5-Year Capital Gain</div><div id="roi-capital-out" class="text-xl font-display font-extrabold text-blue-400 mt-1">PKR 1.90 Crore</div></div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800"><div class="text-xs text-slate-400">Total 5-Year ROI</div><div id="roi-total-out" class="text-xl font-display font-extrabold text-purple-400 mt-1">PKR 3.22 Crore</div></div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <span class="text-xs text-slate-400">*Estimates based on current Bosan Road prime market trends.</span>
+              <a href="https://wa.me/923006367424?text=Assalam%20o%20Alaikum,%20I%20used%20the%20MCC%20ROI%20Calculator." target="_blank" class="px-6 py-3 rounded-xl text-xs font-bold gold-btn flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4"></i> Lock In Investment Plan
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+﻿
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="images/mcc_logo_gold.jpg" alt="MCC Logo" class="w-12 h-12 rounded-xl border border-amber-400/40 object-contain bg-slate-900 p-0.5" />
+            <div>
+              <span class="font-display font-extrabold text-lg gold-text">MULTAN COMMERCIAL COMPLEX</span>
+              <p class="text-[11px] text-slate-400">MCC • Seyalz Real Estate & Development</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-5 font-light">Under the visionary leadership of <strong class="text-slate-300">Mahar Mazhar Nawaz Sayal</strong> (Managing Director), MCC represents the pinnacle of MDA-approved commercial developments in Multan.</p>
+          <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="text-[11px] text-slate-400">Developed by <strong class="text-amber-300">Seyalz Builders & Developers</strong></div>
+            <div class="text-[11px] text-slate-400 mt-1">Designed by <strong class="text-slate-200">Vision Developers & Builders</strong></div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="#hero" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="#md-message" class="hover:text-amber-400 transition-colors">MD's Vision</a></li>
+            <li><a href="#projects" class="hover:text-amber-400 transition-colors text-amber-300 font-semibold">Our Projects</a></li>
+            <li><a href="#offerings" class="hover:text-amber-400 transition-colors">Commercial Units</a></li>
+            <li><a href="#location" class="hover:text-amber-400 transition-colors">Location</a></li>
+            <li><a href="#roi-calculator" class="hover:text-amber-400 transition-colors">ROI Calculator</a></li>
+            <li><a href="#connect" class="hover:text-amber-400 transition-colors">Connect with MCC</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">Our Portfolio</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li class="flex items-center gap-2 cursor-pointer hover:text-amber-300" onclick="openProjectModal('mcc')"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-400"></i><span>Multan Commercial Complex (MCC)</span></li>
+            <li class="flex items-center gap-2 cursor-pointer hover:text-amber-300" onclick="openProjectModal('scc')"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-400"></i><span>Seyal Commercial Centre</span></li>
+            <li class="flex items-center gap-2 cursor-pointer hover:text-amber-300" onclick="openProjectModal('tower')"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-400"></i><span>Seyalz Commercial Tower</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-400"></i><span>Ground Floor Retail Promenades</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-400"></i><span>Executive Corporate Suites</span></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">Site Office & Contact</h4>
+          <p class="text-xs text-slate-400 mb-2">Chungi No. 6, Bosan Road, Near Chaseup Mall, Multan, Pakistan</p>
+          <p class="text-xs font-bold text-amber-400 mb-1">Phone: +92 300 6367424</p><p class="text-xs font-bold text-amber-400 mb-1">Email: mccmultancommercialcomplex@gmail.com</p>
+          <p class="text-xs text-slate-400 mb-5">Portal: <a href="https://seyalz.com" target="_blank" class="text-blue-400 hover:underline">seyalz.com</a></p>
+          <div class="flex items-center gap-2">
+            <a href="https://vt.tiktok.com/ZSVWUpw3p/" target="_blank" class="w-9 h-9 rounded-xl bg-black flex items-center justify-center hover:bg-slate-800 transition-colors border border-slate-700" title="TikTok"><i data-lucide="video" class="w-4 h-4 text-amber-400"></i></a>
+            <a href="https://www.tiktok.com/@multancommercialcomplex" target="_blank" class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition-colors" title="Channel"><i data-lucide="share-2" class="w-4 h-4 text-white"></i></a>
+            <a href="https://www.instagram.com/multancommercialcomplexmcc" target="_blank" class="w-9 h-9 rounded-xl bg-gradient-to-tr from-yellow-500 to-pink-600 flex items-center justify-center hover:opacity-90 transition-opacity" title="Instagram"><i data-lucide="instagram" class="w-4 h-4 text-white"></i></a>
+            <a href="https://wa.me/923006367424" target="_blank" class="w-9 h-9 rounded-xl bg-emerald-600 flex items-center justify-center hover:bg-emerald-500 transition-colors" title="WhatsApp"><i data-lucide="message-circle" class="w-4 h-4 text-white"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Credit Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>&copy; 2024 – 2026 Multan Commercial Complex (MCC). All rights reserved. • MDA Approved Project</div>
+        <div class="text-slate-500 text-xs">Website Created By <span class="text-slate-400 font-semibold">Atta Muhammad</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl text-white max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal('project-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div id="proj-badge" class="inline-block px-3 py-1 rounded-full text-xs font-black uppercase bg-amber-500 text-slate-950 mb-3">Project Details</div>
+      <h3 id="proj-title" class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">Multan Commercial Complex</h3>
+      <p id="proj-loc" class="text-xs text-amber-300 flex items-center gap-1.5 mb-5"><i data-lucide="map-pin" class="w-4 h-4"></i><span>Location</span></p>
+      <div class="rounded-2xl overflow-hidden mb-6 border border-slate-700"><img id="proj-img" src="" alt="Project Visual" class="w-full h-64 object-cover" /></div>
+      <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-2">Project Overview</h4>
+      <p id="proj-desc" class="text-sm text-slate-300 leading-relaxed mb-6 font-light"></p>
+      <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-3">Key Amenities</h4>
+      <div id="proj-amenities" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6"></div>
+      <div class="flex gap-3">
+        <a id="proj-wa-link" href="https://wa.me/923006367424" target="_blank" class="flex-1 py-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i> Inquire on WhatsApp</a>
+        <a href="tel:+923006367424" class="px-6 py-3.5 rounded-xl font-bold text-xs gold-btn flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Sales Desk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE VISIT MODAL -->
+  <div id="visit-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-md bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl text-white">
+      <button onclick="closeModal('visit-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4"><i data-lucide="calendar-check" class="w-6 h-6"></i></div>
+      <h3 class="font-display font-extrabold text-2xl mb-1">Book Site Visit</h3>
+      <p class="text-xs text-slate-400 mb-6">Schedule an exclusive guided walkthrough with our project management team.</p>
+      <form onsubmit="handleVisitSubmit(event)" class="space-y-3.5">
+        <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Your Name</label><input required type="text" placeholder="Full Name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none" /></div>
+        <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Phone / WhatsApp</label><input required type="tel" placeholder="+92 300 6367424" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none" /></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Date</label><input required type="date" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none text-slate-200" /></div>
+          <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Time</label><select class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none text-slate-200"><option>Morning (10 AM - 1 PM)</option><option>Afternoon (2 PM - 5 PM)</option><option>Evening (5 PM - 8 PM)</option></select></div>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm gold-btn mt-2">Confirm Appointment Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- INQUIRY MODAL -->
+  <div id="inquiry-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-md bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl text-white">
+      <button onclick="closeModal('inquiry-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4"><i data-lucide="message-square" class="w-6 h-6"></i></div>
+      <h3 class="font-display font-extrabold text-2xl mb-1">Unit Inquiry</h3>
+      <p id="inquiry-unit-label" class="text-xs text-amber-300 font-semibold mb-5">Commercial Unit</p>
+      <form onsubmit="handleInquiryModalSubmit(event)" class="space-y-3.5">
+        <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Your Name</label><input required type="text" placeholder="Full Name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none" /></div>
+        <div><label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Phone / WhatsApp</label><input required type="tel" placeholder="+92 300 6367424" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm focus:border-amber-400 focus:outline-none" /></div>
+        <div class="flex gap-2 pt-2">
+          <button type="submit" class="flex-1 py-3 rounded-xl font-bold text-xs gold-btn">Send Inquiry</button>
+          <a id="modal-wa-btn" href="https://wa.me/923006367424" target="_blank" class="px-4 py-3 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT CONTROLLER -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+      updateRoiCalc();
+    });
+
+    function toggleTheme() {
+      document.body.classList.toggle('bg-slate-50');
+      document.body.classList.toggle('text-slate-900');
+    }
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      t.classList.remove('hidden'); t.classList.add('flex');
+      setTimeout(hideToast, 4000);
+    }
+    function hideToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('hidden'); t.classList.remove('flex');
+    }
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('hidden'); el.classList.add('flex'); }
+    }
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+    }
+    function openInquiryModal(unitName) {
+      document.getElementById('inquiry-unit-label').innerText = "Selected: " + unitName;
+      document.getElementById('modal-wa-btn').href = "https://wa.me/923006367424?text=" + encodeURIComponent("Assalam o Alaikum, I am inquiring about " + unitName + " at Multan Commercial Complex.");
+      openModal('inquiry-modal');
+    }
+    const projectsData = {
+      mcc: { title: "Multan Commercial Complex (MCC)", badge: "Flagship Development • MDA Approved", location: "Chungi No. 6, Bosan Road, Near Chaseup Mall, Multan", image: "images/mcc_main_facade.jpg", desc: "The premier commercial landmark of Multan. Designed by Vision Developers in association with Seyalz — triple-story units, double-height retail shopfronts, high-tech corporate halls with 200+ multi-level parking.", amenities: ["Triple-Story Commercial Layouts","100% Dual Generator Power Backup","200+ Multi-Level Vehicle Parking","Double-Height Glass Shopfronts","24/7 Gated Security & HD CCTV","Possession Ready by Dec 31, 2024"] },
+      scc: { title: "Seyal Commercial Centre", badge: "Delivered & Operating • Retail Boulevard", location: "Near ISP University, Opp. DHA Main Bosan Road, Multan", image: "images/project_seyal_commercial_centre_1.jpg", desc: "A delivered retail centre home to leading brands including Bonanza, Dhanak, and Crystal. Prime Bosan Road frontage with double-story hall spaces and comprehensive registry setup.", amenities: ["Double-Story Commercial Halls","Direct Main Bosan Road Facing","Opposite DHA Multan Main Corridor","Ample Customer Surface Parking","Clear Legal Title & Registry Setup","Available for Rent and Sale"] },
+      tower: { title: "Seyalz Commercial Tower", badge: "Corporate High-Rise Development", location: "Chungi #6, Near Chaseup Main Bosan Road, Multan", image: "images/project_seyalz_tower.jpg", desc: "A multi-story commercial and executive corporate tower engineered for multinational headquarters, IT hubs, and financial consultancies.", amenities: ["Multi-Story Contemporary Architecture","High-Speed Capsule Elevators","Corporate Office & Clinic Suites","Dedicated Underground Basement Parking","Modern Fire Suppression System","Smart Building Management System"] }
+    };
+    function openProjectModal(key) {
+      const proj = projectsData[key]; if (!proj) return;
+      document.getElementById('proj-title').innerText = proj.title;
+      document.getElementById('proj-badge').innerText = proj.badge;
+      document.getElementById('proj-loc').querySelector('span').innerText = proj.location;
+      document.getElementById('proj-img').src = proj.image;
+      document.getElementById('proj-desc').innerText = proj.desc;
+      document.getElementById('proj-amenities').innerHTML = proj.amenities.map(a => `<div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center gap-2 text-xs text-slate-200"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400 flex-shrink-0"></i><span>${a}</span></div>`).join('');
+      document.getElementById('proj-wa-link').href = "https://wa.me/923006367424?text=" + encodeURIComponent("Assalam o Alaikum, please send details for " + proj.title + ".");
+      openModal('project-modal');
+      if (window.lucide) window.lucide.createIcons();
+    }
+    function handleVisitSubmit(e) { e.preventDefault(); closeModal('visit-modal'); showToast('Site visit booked! Our team will call to confirm.'); e.target.reset(); }
+    function handleInquiryModalSubmit(e) { e.preventDefault(); closeModal('inquiry-modal'); showToast('Inquiry received! Sales team will contact you shortly.'); e.target.reset(); }
+    function formatPKR(val) {
+      if (val >= 10000000) return `PKR ${(val / 10000000).toFixed(2)} Crore`;
+      if (val >= 100000) return `PKR ${(val / 100000).toFixed(2)} Lakh`;
+      return `PKR ${val.toLocaleString()}`;
+    }
+    function updateRoiCalc() {
+      const inv = Number(document.getElementById('roi-inv-range').value);
+      const yld = Number(document.getElementById('roi-yield-range').value);
+      const appr = Number(document.getElementById('roi-appr-range').value);
+      document.getElementById('roi-inv-val').innerText = formatPKR(inv);
+      document.getElementById('roi-yield-val').innerText = yld + "% / Year";
+      document.getElementById('roi-appr-val').innerText = appr + "% / Year";
+      const monthly = Math.round((inv * (yld/100)) / 12);
+      const annual = Math.round(inv * (yld/100));
+      const gain = Math.round(inv * Math.pow((1 + appr/100), 5) - inv);
+      const total = (annual * 5) + gain;
+      document.getElementById('roi-monthly-out').innerText = formatPKR(monthly);
+      document.getElementById('roi-annual-out').innerText = formatPKR(annual);
+      document.getElementById('roi-capital-out').innerText = formatPKR(gain);
+      document.getElementById('roi-total-out').innerText = formatPKR(total);
+    }
+  </script>
+</body>
+</html>
